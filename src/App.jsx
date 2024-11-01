@@ -48,9 +48,9 @@ function App() {
         <div className="todo">
 
           <div className={`new ${theme}`}>
+            <div className="incomplete">
+            </div>
             <div className={`input-new ${theme}`}>
-              <div className="incomplete">
-              </div>
               <input type='text' placeholder='Create a new todo...' value={inputValue} onChange={handleInputChange} />
             </div>
             <div className="add" onClick={addNewTodo}>

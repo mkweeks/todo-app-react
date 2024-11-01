@@ -43,7 +43,7 @@ function App() {
         <div className='nav' >
           <h1>TODO</h1>
 
-          {theme === "dark" ? <img src='../src/assets/images/icon-sun.svg' onClick={toggleTheme} /> : <img src='../src/assets/images/icon-moon.svg ' onClick={toggleTheme} />}
+          {theme === "dark" ? <img src='/assets/images/icon-sun.svg' onClick={toggleTheme} /> : <img src='/assets/images/icon-moon.svg ' onClick={toggleTheme} />}
         </div>
         <div className="todo">
 
@@ -54,7 +54,7 @@ function App() {
               <input type='text' placeholder='Create a new todo...' value={inputValue} onChange={handleInputChange} />
             </div>
             <div className="add" onClick={addNewTodo}>
-              <img src='../src/assets/images/icon-cross.svg' />
+              <img src='/assets/images/icon-cross.svg' />
             </div>
           </div>
           {

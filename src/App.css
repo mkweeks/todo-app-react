@@ -6,13 +6,13 @@
   flex-direction: column;
   height: 100svh;
   background-repeat: no-repeat;
-  background-image: url(../src/assets/images/bg-desktop-light.jpg);
+  background-image: url(/assets/images/bg-desktop-light.jpg);
   font-family: "Josefin Sans", sans-serif;
   transition: 0.4s ease-in-out;
 }
 
 .main.dark {
-  background-image: url(../src/assets/images/bg-desktop-dark.jpg);
+  background-image: url(/assets/images/bg-desktop-dark.jpg);
   background-color: hsl(235, 21%, 11%);
   transition: 0.4s ease-in-out;
 }

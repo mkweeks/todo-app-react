@@ -7,8 +7,6 @@ function App() {
   const [todoList, setTodoList] = useState([])
   const [inputValue, setInputValue] = useState("")
   const incompleteCount = todoList.filter(todo => todo.status === "incomplete").length;
-
-
   const { theme, toggleTheme } = useTheme();
 
   const handleInputChange = (event) => {
@@ -16,7 +14,10 @@ function App() {
   }
 
   const addNewTodo = () => {
-    setTodoList([...todoList, { text: inputValue, status: "incomplete" }])
+    if (inputValue !== "") {
+      setTodoList([...todoList, { text: inputValue, status: "incomplete" }])
+      setInputValue("")
+    }
   }
 
   const deleteTodo = (index) => {
@@ -28,8 +29,8 @@ function App() {
   }
 
   const completed = (index) => {
-    setTodoList(todoList.map((todo, i) =>
-      i === index ? { ...todo, status: "complete" } : todo
+    setTodoList(todoList.map((todo, i) => 
+        i === index ? { ...todo, status: "complete" } : todo
     ));
   }
 
